@@ -900,6 +900,13 @@
     cssnano-preset-default "^4.0.0"
     postcss "^7.0.0"
 
+"@mohayonao/web-audio-api-shim@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@mohayonao/web-audio-api-shim/-/web-audio-api-shim-0.3.0.tgz#9ad02c3fec6f91d464258e83bc9d880c87d9467f"
+  integrity sha1-mtAsP+xvkdRkJY6DvJ2IDIfZRn8=
+  dependencies:
+    stereo-panner-node "^0.2.0"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -7507,6 +7514,11 @@ static-extend@^0.1.1:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
+
+stereo-panner-node@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/stereo-panner-node/-/stereo-panner-node-0.2.0.tgz#9da985693d545ebd9740a396af51683ac58a0abd"
+  integrity sha1-namFaT1UXr2XQKOWr1FoOsWKCr0=
 
 stream-browserify@^2.0.1:
   version "2.0.2"

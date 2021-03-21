@@ -1,0 +1,20 @@
+// Color names generated from https://chir.ag/projects/name-that-color
+$c-black: #000000;
+$c-cod-gray: #1e1e1e;
+$c-mine-shaft: rgb(54, 54, 54);
+$c-dove-gray: rgb(100, 100, 100);
+$c-dusty-gray: rgb(155,155,155);
+$c-silver: rgb(220, 220, 220);
+$c-white: #ffffff;
+
+$c-cinnabar: #E53935;
+$c-mandy: #e35d5b;
+$c-riptide: #81e6d9;
+$c-bright-turquoise: #00ffcb;
+$c-viking: #4FD1C5;
+$c-eastern-blue: #18A5A7;
+$c-snowy-mint: #BFFFC7;
+$c-san-juan-blue: #344675;
+
+$c-eastern-snow-gradient: linear-gradient(45deg, $c-eastern-blue 0%, $c-snowy-mint 100%);
+$c-passion-gradient: linear-gradient(90deg, $c-cinnabar 0%, $c-mandy 100%);

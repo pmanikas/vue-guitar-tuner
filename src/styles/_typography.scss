@@ -1,0 +1,96 @@
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+
+html {
+  font-size: percentage(7 / 16);
+  letter-spacing: 0;
+  @include tablet {
+    font-size: percentage(8 / 16);
+    letter-spacing: .005em;
+  }
+  @include desktop {
+    font-size: percentage(9 / 16);
+    letter-spacing: .01em;
+  }
+  @include largescreen {
+    font-size: percentage(10 / 16);
+    letter-spacing: .02em;
+  }
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1.8em;
+  line-height: 1.5;
+}
+
+h1 {
+  margin: 0;
+  line-height: 1;
+  font-size: 3.6rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  @include largescreen {
+    line-height: 1,2;
+  }
+}
+h2 {
+  font-size: 3.2rem;
+  line-height: 1.375;
+}
+h3 {
+  font-size: 3rem;
+  line-height: 1.25;
+}
+h4 {
+  font-size: 2.4rem;
+  font-weight: normal;
+}
+h5 {
+  font-size: 2rem;
+}
+h6 {
+  font-size: 1.8rem;
+}
+
+p {
+  margin: 0 0 1rem;
+  word-wrap: break-word; //legacy
+
+  /* Non standard for webkit */
+  word-break: break-word;
+  overflow-wrap: break-word;
+  -ms-hyphenate-limit-lines: 1;
+  -webkit-hyphenate-limit-lines: 1;
+  -ms-hyphenate-limit-chars: 6 3 2;
+
+  hyphens: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+//medium style links
+p a {
+  background-image: linear-gradient(
+    to bottom,
+    transparent 50%,
+    currentcolor 50%
+  );
+  background-repeat: repeat-x;
+  background-size: 1px 1px;
+  background-position: 0 0.95em;
+}
+
+aside,
+figcaption,
+footer {
+  font-size: .875rem;
+}
+
+figcaption p {
+  max-width: 30em;
+}
