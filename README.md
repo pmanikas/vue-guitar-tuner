@@ -61,6 +61,14 @@ export default {
 };
 ```
 
+### Styles
+
+Include demo styles using import:
+
+``` js
+import("./../node_modules/vue-guitar-tuner/dist/vue-guitar-tuner.css");
+```
+
 ### Configuration
 
 | Property                  | Type    | Default | Description|
