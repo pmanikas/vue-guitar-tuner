@@ -1,51 +1,5 @@
 @import "./design";
 @import "./reset";
 @import "./typography";
+@import "./animations";
 
-* {
-  scrollbar-color: transparentize($c-dusty-gray, 0.5) transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: transparentize($c-dusty-gray, 0.5);
-}
-
-*::-webkit-scrollbar-thumb {
-  border-radius: $base-radius;
-  border: transparent;
-}
-
-body {
-  background: $c-cod-gray;
-  color: $c-silver;
-}
-
-.neon {
-  font-family: neon;
-  color: $c-cinnabar;
-  font-size: $s-xxl;
-  text-shadow: 0 0 $s-l lighten($c-cinnabar, 10%);
-  animation: neon 1s ease infinite;
-}
-
-@keyframes moveDown {
-  0% {
-    transform: translateY(0px) scale(1.2);
-  }
-  100% {
-    transform: translateY(-37px) scale(1.2);
-  }
-}
-
-@keyframes ring {
-  0% {
-    width: 30px;
-    height: 30px;
-    opacity: 1;
-  }
-  100% {
-    width: 300px;
-    height: 300px;
-    opacity: 0;
-  }
-}

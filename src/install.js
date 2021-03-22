@@ -1,4 +1,4 @@
-import GuitarTuner from "./guitar-tuner.vue";
+import GuitarTuner from "./GuitarTuner.vue";
 
 function install(Vue) {
   if (install.installed) return;
@@ -21,5 +21,6 @@ if (GlobalVue) {
 }
 
 GuitarTuner.install = install;
+window.$tuner = GuitarTuner;
 
 export default GuitarTuner;
