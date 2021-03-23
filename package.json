@@ -1,6 +1,6 @@
 {
   "name": "vue-guitar-tuner",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": false,
   "description": "This is a UI enhanced guitar tuner package, using Vue.js hooks.",
   "author": {
@@ -20,7 +20,7 @@
     "url": "https://github.com/pmanikas/vue-guitar-tuner/issues",
     "email": "pmanikas.social@gmail.com"
   },
-  "license": "MIT",
+  "license": "APACHE",
   "funding": [
     {
       "type": "patreon",
