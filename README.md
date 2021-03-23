@@ -152,4 +152,4 @@ To modify and add sandbox scenarios, edit `play/index.js`
 
 ## License
 
-This project is licensed under the Apache License - see the [LICENSE](https://github.com/pmanikas/vue-guitar-tuner/blob/master/LICENCE) file for details.
+This project is licensed under the Apache License - see the [LICENCE](https://github.com/pmanikas/vue-guitar-tuner/blob/master/LICENCE) file for details.
