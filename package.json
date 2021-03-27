@@ -1,6 +1,6 @@
 {
   "name": "vue-guitar-tuner",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "description": "This is a UI enhanced guitar tuner package, using Vue.js hooks.",
   "author": {
@@ -20,20 +20,13 @@
     "url": "https://github.com/pmanikas/vue-guitar-tuner/issues",
     "email": "pmanikas.social@gmail.com"
   },
-  "license": "APACHE",
-  "funding": [
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/manikasdeveloper"
-    }
-  ],
   "scripts": {
     "dev": "cd demo && vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "build-package": "vue-cli-service build --target lib --name vue-guitar-tuner ./src/install.js"
   },
-  "main": ".dist/vue-guitar-tuner.common.js",
+  "main": "./dist/vue-guitar-tuner.common.js",
   "files": [
     "dist/*",
     "*.md"
@@ -57,5 +50,12 @@
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "license": "Apache-2.0",
+  "funding": [
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/manikasdeveloper"
+    }
+  ]
 }

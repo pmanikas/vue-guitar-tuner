@@ -9,7 +9,7 @@ Vue.js-powered guitar tuner.
 
 **Feel free to submit issues and feature requests [here](https://github.com/pmanikas/vue-guitar-tuner/issues)**.
 
-**[Demo Page](https://pmanikas.github.io/guitar-tuner/)**
+**[Demo Page](https://pmanikas.github.io/vue-guitar-tuner-demo/)**
 
 ## Table of Contents
 
@@ -66,7 +66,7 @@ export default {
 Include demo styles using import:
 
 ``` js
-import("./../node_modules/vue-guitar-tuner/dist/vue-guitar-tuner.css");
+import("vue-guitar-tuner/dist/vue-guitar-tuner.css");
 ```
 
 ### Configuration
