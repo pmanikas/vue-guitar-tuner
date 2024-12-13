@@ -1,155 +1,32 @@
-# Vue Guitar Tuner
+# Guitar Tuner
 
-## This is a UI enhanced guitar tuner package, using Vue.js hooks
-
-Vue Guitar Tuner is a mobile-ready, customisable,
-Vue.js-powered guitar tuner.
-
-**WARNING: vue-guitar-tuner is at alpha stage of development and may undergo significant changes.**
-
-**Feel free to submit issues and feature requests [here](https://github.com/pmanikas/vue-guitar-tuner/issues)**.
-
-**[Demo Page](https://pmanikas.github.io/vue-guitar-tuner-demo/)**
-
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Development](#development)
-- [License](#license)
+This is a simple guitar tuner that uses the microphone of your computer to detect the pitch of the sound. It is written TypeScript and Vue.js and uses the Web Audio API to analyze the sound.
 
 ## Installation
 
-``` bash
-npm install vue-guitar-tuner
+To install the dependencies, run:
+
+```bash
+npm install
 ```
 
-or if you prefer yarn
+To start the development server, run:
 
-``` bash
-yarn add vue-guitar-tuner
+```bash
+npm run dev
 ```
 
 ## Usage
 
-### Global
+- Press the "Start" button to start the tuner.
+- To use the tuner, simply play a note on your guitar and the tuner will display the detected pitch. The tuner will also display the closest note and the difference in cents.
 
-You may install Vue Guitar Tuner globally:
+## Tools
 
-``` js
-import Vue from 'vue';
-import VueGuitarTuner from 'vue-guitar-tuner';
-
-Vue.use(VueGuitarTuner);
-```
-
-This will make **&lt;VueGuitarTuner&gt;** available to all components within your Vue app.
-
-### Local
-
-Include the tuner directly into your component using import:
-
-``` js
-import VueGuitarTuner from 'vue-guitar-tuner';
-
-export default {
-  ...
-  components: {
-    VueGuitarTuner,
-  }
-  ...
-};
-```
-
-### Styles
-
-Include demo styles using import:
-
-``` js
-import("vue-guitar-tuner/dist/vue-guitar-tuner.css");
-```
-
-### Configuration
-
-| Property                  | Type    | Default | Description|
-|:--------------------------|:--------|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| displayNote               | Boolean | true   | Flag to enable or disable note display. |
-| displayReferenceLine      | Boolean|  true   | Flag to enable or disable the vertical reference line. |
-| displayGrid               | Boolean | true   | Flag to enable or disable background grid. |
-| notes                     | Array  | ['C', ..., 'B'] | An array of Strings that define the 12 notes displayed on note area. Default value: ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]. Must be an array of 12 strings. |
-| tunerClasses              | Array | ['tuner'] | An Array of CSS Classes to customise tuner area. |
-| gridClasses               | Array | ['gridOverlay']  | An array of CSS Classes to customise Grid area. |
-| detuneClasses             | Array | ['detune'] | An Array of CSS Classes to customise Detune area. |
-| detuneTipClasses          | Array | ['detuneTip'] | An Array of CSS Classes to customise the Detune Tip. |
-| detuneValueClasses        | Array | ['detuneValue'] | An Array of CSS Classes to customise the Detune Value. |
-| keySignatureClasses       | Array | ['keySignature'] | An Array of CSS Classes to customise both of the key signatures (flat, sharp). |
-| flatClasses               | Array | ['tuner'] | An Array of CSS Classes to customise the flat character. |
-| sharpClasses              | Array | ['tuner'] | An Array of CSS Classes to customise the sharp character. |
-
-### Events
-
-| Event                     | Type    | Description              |
-|:--------------------------|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `dataUpdate`              |   Object  | Emits whenever there's a new value available. Object includes { pitch: Number, note: Number, detune: Number } |
-| `statusUpdate`            |   Boolean  | Emits whenever the recording statues changes. |
-
-### Actions
-
-| Action            | Description                              |
-|:------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `this.$root.$toggleGuitarTuner()`              |   Toggles the tuner on and off depending on the current recording status. |
-
-### HTML Structure
-
-Once the VueguitarTuner component is installed globally or imported, it can be used in templates in the following manner:
-
-``` vue
-  <VueGuitarTuner :display-note="false" :displayGrid="false" :tunerClasses="['tuner, 'tunerArea']"/>
-```
-
-To listen for the `dataUpdate` and `statusUpdate` events you can do the following:
-
-``` html
-  <VueGuitarTuner @statusUpdate="statusUpdate" @dataUpdate="dataUpdate" />
-```
-
-``` js
-export default {
-    ...
-    data() {
-        return {
-            isTunerActive: false,
-            data: {},
-        };
-    },
-    ...
-    methods: {
-        statusUpdate(status) {
-            this.isTunerActive = status;
-        },
-        dataUpdate(data) {
-            this.data = data;
-        },
-    },
-    ...
-}
-```
-
-## Development
-
-A sandboxed dev environment is provided by [vue-play](https://github.com/vue-play/vue-play). Changes made to the component files will appear in real time in the sandbox.
-
-To begin development, run:
-
-``` bash
-yarn install
-yarn dev
-```
-
-then navigate to `http://localhost:5000`
-
-To modify and add sandbox scenarios, edit `play/index.js`
+- For logo design:
+  - Go to [Pixilart](https://www.pixilart.com/draw)
+  - Import the pixil file from 'src/assets/images'
 
 ## License
 
-This project is licensed under the Apache License - see the [LICENCE](https://github.com/pmanikas/vue-guitar-tuner/blob/master/LICENCE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

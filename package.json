@@ -1,61 +1,24 @@
 {
-  "name": "vue-guitar-tuner",
-  "version": "1.0.3",
-  "private": false,
-  "description": "This is a UI enhanced guitar tuner package, using Vue.js hooks.",
-  "author": {
-    "name": "Pantelis Manikas",
-    "email": "pmanikas.social@gmail.com",
-    "url": "https://pantelismanikas.eu"
-  },
-  "keywords": [
-    "guitar",
-    "tuner",
-    "music",
-    "vuejs"
-  ],
-  "homepage": "https://github.com/pmanikas/vue-guitar-tuner#readme",
-  "repository": "https://github.com/pmanikas/vue-guitar-tuner",
-  "bugs": {
-    "url": "https://github.com/pmanikas/vue-guitar-tuner/issues",
-    "email": "pmanikas.social@gmail.com"
-  },
-  "scripts": {
-    "dev": "cd demo && vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "build-package": "vue-cli-service build --target lib --name vue-guitar-tuner ./src/install.js"
-  },
-  "main": "./dist/vue-guitar-tuner.common.js",
-  "files": [
-    "dist/*",
-    "*.md"
-  ],
-  "dependencies": {
-    "@mohayonao/web-audio-api-shim": "^0.3.0",
-    "component-emitter": "^1.3.0",
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-vue": "^6.2.2",
-    "prettier": "^2.2.1",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "license": "Apache-2.0",
-  "funding": [
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/manikasdeveloper"
+    "name": "guitar-tuner",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc -b && vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@mohayonao/web-audio-api-shim": "^0.3.0",
+        "component-emitter": "^2.0.0",
+        "vue": "^3.5.13"
+    },
+    "devDependencies": {
+        "@types/node": "^22.10.2",
+        "@vitejs/plugin-vue": "^5.2.1",
+        "sass": "^1.82.0",
+        "typescript": "~5.6.2",
+        "vite": "^6.0.1",
+        "vue-tsc": "^2.1.10"
     }
-  ]
 }

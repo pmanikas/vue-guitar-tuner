@@ -1,0 +1,67 @@
+@use "sizes" as *;
+
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin square($size) {
+    width: $size;
+    height: $size;
+}
+
+@mixin mobile {
+    @media (min-width: $mobile-landscape) {
+        @content;
+    }
+}
+
+@mixin mobileOnly {
+    @media (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin widescreen {
+    @media (min-width: $widescreen) {
+        @content;
+    }
+}
+
+@mixin largescreen {
+    @media (min-width: $largescreen) {
+        @content;
+    }
+}
+
+@mixin gridBackground($color: black, $size: 20px) {
+    background-image: repeating-linear-gradient(
+            $color -1px 1px,
+            transparent 1px 100%
+        ),
+        repeating-linear-gradient(90deg, $color -1px 1px, transparent 1px 100%);
+    background-size: $size $size;
+    background-position: center center;
+}
