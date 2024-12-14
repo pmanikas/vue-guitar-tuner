@@ -1,5 +1,5 @@
 import Emitter from "component-emitter";
-import { autoCorrelate } from "./../algorithms/autoCorrelate";
+import { autoCorrelate as algo } from "../algorithms/auto-correlate";
 
 type EventCallback = (...args: any[]) => void;
 
@@ -60,8 +60,8 @@ export default function (): SoundService {
     function updatePitch(): void {
         if (analyser) {
             analyser.getFloatTimeDomainData(buf);
-            const ac = autoCorrelate(buf, audioContext!.sampleRate);
-            emitAcUpdate(ac);
+            const frequency = algo(buf, audioContext!.sampleRate);
+            emitAcUpdate(frequency);
         }
 
         setTimeout(updatePitch, 100);

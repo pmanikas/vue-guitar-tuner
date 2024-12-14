@@ -7,6 +7,11 @@
     box-sizing: border-box;
 }
 
+::selection {
+    background-color: transparent;
+    color: inherit;
+}
+
 /* Remove default margin */
 body,
 h1,
@@ -21,6 +26,7 @@ blockquote,
 dl,
 dd {
     margin: 0;
+    cursor: default;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */

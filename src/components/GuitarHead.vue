@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 
 const keys = ref(['D', 'A', 'E', 'G', 'B', 'e']);
@@ -19,7 +19,7 @@ const keys = ref(['D', 'A', 'E', 'G', 'B', 'e']);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: $s-m;
 }
 
 .head-shape {
@@ -35,8 +35,8 @@ const keys = ref(['D', 'A', 'E', 'G', 'B', 'e']);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
     color: $c-cod-gray;
     background-color: $c-silver;
     border-radius: 50%;
