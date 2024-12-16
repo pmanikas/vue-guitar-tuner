@@ -1,24 +1,26 @@
 {
-    "name": "guitar-tuner",
-    "private": true,
-    "version": "0.0.0",
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vue-tsc -b && vite build",
-        "preview": "vite preview"
-    },
-    "dependencies": {
-        "@mohayonao/web-audio-api-shim": "^0.3.0",
-        "component-emitter": "^2.0.0",
-        "vue": "^3.5.13"
-    },
-    "devDependencies": {
-        "@types/node": "^22.10.2",
-        "@vitejs/plugin-vue": "^5.2.1",
-        "sass": "^1.82.0",
-        "typescript": "~5.6.2",
-        "vite": "^6.0.1",
-        "vue-tsc": "^2.1.10"
-    }
+  "name": "guitar-tuner",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "vue-tsc -b && vite build",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mohayonao/web-audio-api-shim": "^0.3.0",
+    "component-emitter": "^2.0.0",
+    "register-service-worker": "^1.7.2",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/cli-plugin-pwa": "~5.0.0",
+    "sass": "^1.82.0",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.1",
+    "vue-tsc": "^2.1.10"
+  },
+  "type": "module"
 }
