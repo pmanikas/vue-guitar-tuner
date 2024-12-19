@@ -1,14 +1,14 @@
 const CACHE_VERSION = 1;
 const CACHE_NAME = `guitar-tuner-app-cache-${CACHE_VERSION}`;
 const urlsToCache = [
-    "/",
-    "/index.html",
-    "/icons/android-chrome-192x192.png",
-    "/icons/android-chrome-512x512.png",
-    "/icons/apple-touch-icon.png",
-    "/icons/favicon-16x16.png",
-    "/icons/favicon-32x32.png",
-    "/icons/favicon.ico",
+    "./",
+    "./index.html",
+    "./icons/android-chrome-192x192.png",
+    "./icons/android-chrome-512x512.png",
+    "./icons/apple-touch-icon.png",
+    "./icons/favicon-16x16.png",
+    "./icons/favicon-32x32.png",
+    "./icons/favicon.ico",
 ];
 
 self.addEventListener("install", (event) => {
