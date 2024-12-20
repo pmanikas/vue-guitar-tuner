@@ -9,7 +9,7 @@ interface SoundService {
     stop(): void;
     start(): void;
     noteFromPitch(frequency: number): number;
-    centsOffFromPitch(frequency: number, note: number): number;
+    centsOffFromPitch(frequency: number, note: number): number | null;
 }
 
 export default function (): SoundService {
@@ -53,7 +53,9 @@ export default function (): SoundService {
         return 440 * Math.pow(2, (note - 69) / 12);
     }
 
-    function centsOffFromPitch(frequency: number, note: number): number {
+    function centsOffFromPitch(frequency: number, note: number): number | null {
+        // guard to prevent NAN
+        if (!frequency) return  null;
         return Math.floor(1200 * (Math.log(frequency / frequencyFromNoteNumber(note)) / Math.log(2)));
     }
 
@@ -61,6 +63,8 @@ export default function (): SoundService {
         if (analyser) {
             analyser.getFloatTimeDomainData(buf);
             const frequency: number = algo(buf, audioContext!.sampleRate) || 0;
+            console.log(frequency);
+
             emitAcUpdate(frequency);
         }
 
