@@ -63,8 +63,6 @@ export default function (): SoundService {
         if (analyser) {
             analyser.getFloatTimeDomainData(buf);
             const frequency: number = algo(buf, audioContext!.sampleRate) || 0;
-            console.log(frequency);
-
             emitAcUpdate(frequency);
         }
 
