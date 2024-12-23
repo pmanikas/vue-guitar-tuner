@@ -60,7 +60,7 @@ export default function (): SoundService {
     function updatePitch(): void {
         if (analyser) {
             analyser.getFloatTimeDomainData(buf);
-            const frequency = algo(buf, audioContext!.sampleRate);
+            const frequency: number = algo(buf, audioContext!.sampleRate) || 0;
             emitAcUpdate(frequency);
         }
 

@@ -65,7 +65,7 @@ onUnmounted(() => {
             <div class="detune">
                 <div class="key-signature flat">&#9837;</div>
                 <div :class="['detune-tip', detune !== null && (Math.abs(detune) < 5 ? 'tuned' : 'untuned')]"
-                    :style="{ transform: `translateX(${detune * 4 || 0}px)` }">
+                    :style="{ transform: `translateX(${(detune || 0) * 4 || 0}px)` }">
                     <span class="detune-value">{{ detune !== null ? detune : '--' }}</span>
                 </div>
                 <div class="key-signature sharp">&#9839;</div>
