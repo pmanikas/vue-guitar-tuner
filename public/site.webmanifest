@@ -1,7 +1,7 @@
 {
     "name": "Guitar Tuner",
     "short_name": "Guitar Tuner",
-    "start_url": "/",
+    "start_url": "./",
     "display": "standalone",
     "theme_color": "#265454",
     "background_color": "#265454",
